@@ -7,5 +7,5 @@ We aim for a commercial application that can sell electronic accessories, user-f
 - 🚀 Clone this repo
 - 🚀 Run below code in terminal of project
 
-. flutter pub get
-. flutter run
++ flutter pub get
++ flutter run
