@@ -2,6 +2,7 @@ import 'dart:ffi';
 
 import 'package:demo_project/common/widgets/dialogs/dialog_wrapper.dart';
 import 'package:demo_project/models/enum/slide_model.dart';
+import 'package:demo_project/screens/bottom_nav_screen.dart';
 import 'package:demo_project/screens/main_screen.dart';
 import 'package:demo_project/screens/sign_up_screen.dart';
 import 'package:demo_project/widgets/app_bar_widget.dart';
@@ -102,7 +103,7 @@ class _LogInScreenState extends State<LogInScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => MainScreen(),
+                              builder: (context) => BottomNav(),
                             ),
                           );
                         },

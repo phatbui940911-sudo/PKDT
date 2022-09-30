@@ -1,9 +1,12 @@
 import 'package:demo_project/models/categories_model.dart';
+import 'package:demo_project/screens/account_screen.dart';
+import 'package:demo_project/screens/category_screen.dart';
 import 'package:demo_project/screens/detail_screen.dart';
+import 'package:demo_project/screens/messenger_screen.dart';
 import 'package:demo_project/widgets/app_bar_widget.dart';
 import 'package:demo_project/widgets/banner_widget.dart';
 import 'package:demo_project/widgets/gridcate.dart';
-import 'package:demo_project/widgets/icon_widget.dart';
+
 import 'package:demo_project/widgets/menu_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -16,6 +19,13 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    categories.first.ischeck = true;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -300,22 +310,6 @@ class _MainScreenState extends State<MainScreen> {
             ),
           ],
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
-        fixedColor: Color(0xff122636),
-        type: BottomNavigationBarType.fixed,
-        iconSize: 20.sp,
-        items: [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined), title: Text('Home')),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.computer_outlined), title: Text('Category')),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.message_outlined), title: Text('Messenger')),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline), title: Text('Account'))
-        ],
       ),
     );
   }

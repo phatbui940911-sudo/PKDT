@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
     return Sizer(
       builder: (context, orientation, deviceType) {
         return MaterialApp(
-          theme: ThemeData.dark(),
           debugShowCheckedModeBanner: false,
           home: HomeScreen(),
         );
