@@ -6,4 +6,5 @@ How I can run it?
   🚀 Run below code in terminal of project
   
   flutter pub get
+  
   flutter run
