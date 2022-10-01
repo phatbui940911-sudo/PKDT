@@ -163,10 +163,21 @@ class _CartScreenState extends State<CartScreen> {
                                 SizedBox(
                                   height: 10.sp,
                                 ),
-                                ButtonWidget1(
-                                  title: 'Thanh toán giỏ hàng',
-                                ),
                               ],
+                            ),
+                          ),
+                          Container(
+                            height: 1.sp,
+                            width: 100.w,
+                            color: Colors.black,
+                          ),
+                          SizedBox(
+                            height: 10.sp,
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.sp),
+                            child: ButtonWidget1(
+                              title: 'Thanh toán giỏ hàng',
                             ),
                           ),
                           SizedBox(
