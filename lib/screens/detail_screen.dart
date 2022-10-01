@@ -1,4 +1,5 @@
 import 'package:demo_project/models/color_model.dart';
+import 'package:demo_project/screens/cart_screen.dart';
 import 'package:demo_project/widgets/app_bar_widget.dart';
 import 'package:demo_project/widgets/menu_widget.dart';
 import 'package:flutter/material.dart';
@@ -54,7 +55,7 @@ class _Detail_ScreenState extends State<DetailScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => DetailScreen(),
+                                  builder: (context) => CartScreen(),
                                 ),
                               );
                             },

@@ -1,3 +1,4 @@
+import 'package:demo_project/screens/cart_screen.dart';
 import 'package:demo_project/widgets/app_bar_widget.dart';
 import 'package:demo_project/widgets/grid_category.dart';
 import 'package:demo_project/widgets/menu_widget.dart';
@@ -33,7 +34,7 @@ class CategoryScreen extends StatelessWidget {
                     'Category',
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 13.sp,
+                        fontSize: 14.sp,
                         fontWeight: FontWeight.w500),
                   ),
                   Spacer(),
@@ -44,7 +45,7 @@ class CategoryScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => DetailScreen(),
+                                builder: (context) => CartScreen(),
                               ),
                             );
                           },

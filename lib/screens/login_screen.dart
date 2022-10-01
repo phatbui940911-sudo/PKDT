@@ -3,6 +3,7 @@ import 'dart:ffi';
 import 'package:demo_project/common/widgets/dialogs/dialog_wrapper.dart';
 import 'package:demo_project/models/enum/slide_model.dart';
 import 'package:demo_project/screens/bottom_nav_screen.dart';
+import 'package:demo_project/screens/home_screen.dart';
 import 'package:demo_project/screens/main_screen.dart';
 import 'package:demo_project/screens/sign_up_screen.dart';
 import 'package:demo_project/widgets/app_bar_widget.dart';
@@ -49,7 +50,24 @@ class _LogInScreenState extends State<LogInScreen> {
               ),
               Padding(
                 padding: EdgeInsets.only(left: 10.sp),
-                child: IconBackWidget(),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomeScreen(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    color: Colors.transparent,
+                    child: Icon(
+                      Icons.arrow_back_ios,
+                      size: 18.sp,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
               ),
               Spacer(),
               Text(

@@ -1,8 +1,8 @@
 import 'package:demo_project/models/categories_model.dart';
-import 'package:demo_project/screens/account_screen.dart';
-import 'package:demo_project/screens/category_screen.dart';
+import 'package:demo_project/screens/cart_screen.dart';
+
 import 'package:demo_project/screens/detail_screen.dart';
-import 'package:demo_project/screens/messenger_screen.dart';
+
 import 'package:demo_project/widgets/app_bar_widget.dart';
 import 'package:demo_project/widgets/banner_widget.dart';
 import 'package:demo_project/widgets/gridcate.dart';
@@ -21,7 +21,6 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     categories.first.ischeck = true;
   }
@@ -38,7 +37,6 @@ class _MainScreenState extends State<MainScreen> {
       body: Container(
         width: 100.w,
         height: 100.h,
-        color: Colors.white,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -56,7 +54,7 @@ class _MainScreenState extends State<MainScreen> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => DetailScreen(),
+                                builder: (context) => CartScreen(),
                               ),
                             );
                           },
@@ -264,33 +262,45 @@ class _MainScreenState extends State<MainScreen> {
                                         fontWeight: FontWeight.w600,
                                         color: Colors.black),
                                   ),
-                                  Container(
-                                    child: Row(
-                                      children: [
-                                        Text(
-                                          'View All',
-                                          style: TextStyle(
-                                              color: Colors.grey,
-                                              fontSize: 11.sp),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => DetailScreen(),
                                         ),
-                                        SizedBox(
-                                          width: 7.sp,
-                                        ),
-                                        Container(
-                                          height: 12.sp,
-                                          width: 12.sp,
-                                          decoration: BoxDecoration(
-                                              color: Colors.grey,
-                                              borderRadius:
-                                                  BorderRadius.circular(3.sp)),
-                                          alignment: Alignment.center,
-                                          child: Icon(
-                                            Icons.arrow_forward_ios_outlined,
-                                            size: 6.sp,
-                                            color: Colors.grey.shade200,
+                                      );
+                                    },
+                                    child: Container(
+                                      color: Colors.transparent,
+                                      child: Row(
+                                        children: [
+                                          Text(
+                                            'View All',
+                                            style: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 11.sp),
                                           ),
-                                        ),
-                                      ],
+                                          SizedBox(
+                                            width: 7.sp,
+                                          ),
+                                          Container(
+                                            height: 12.sp,
+                                            width: 12.sp,
+                                            decoration: BoxDecoration(
+                                                color: Colors.grey,
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        3.sp)),
+                                            alignment: Alignment.center,
+                                            child: Icon(
+                                              Icons.arrow_forward_ios_outlined,
+                                              size: 6.sp,
+                                              color: Colors.grey.shade200,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   )
                                 ],
